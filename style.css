@@ -4,14 +4,13 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(255, 255, 255);
-    background-color: #000000;
+    background: url('MCT.jpeg') no-repeat center center fixed;
+    background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: url('MCT.jpeg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 /** ---------- Header ---------- */
@@ -62,7 +61,7 @@ nav ul li {
 }
 
 a {
-    background-color: #ffd90000;
+    background-color: transparent;
     color: rgb(151, 151, 151);
     padding: 10px;
     text-align: center;
@@ -92,9 +91,9 @@ a {
 }
 
 .home-image img {
-    width: 500%;
+    width: 100%;
     max-width: 230px;
-    object-fit: inherit;
+    object-fit: cover;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -105,11 +104,7 @@ a {
     color: #ffffff;
 }
 
-.home-text h2 {
-    margin-top: 0;
-}
-
-.home-text h3 {
+.home-text h2, .home-text h3 {
     margin-top: 0;
     color: #ffffff;
 }
@@ -124,13 +119,11 @@ a {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
 }
 
 .home-content.reverse {
     flex-direction: row-reverse;
 }
-
 
 /** ---------- Page Indicator ---------- */
 .page-indicator {
@@ -152,15 +145,32 @@ a {
     font-weight: bold;
 }
 
+/** ---------- Glassmorphism Card ---------- */
+.glass-card {
+    background: #ffd9001e;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.062);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: scale(1.03);
+}
+
 /** ---------- About Section ---------- */
 .about-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     color: #ffffff;
-    text-align: center; /* Centering the content */
+    text-align: center;
+}
 
-    .about-image img {
+.about-content .about-image img {
     max-width: 30%;
     height: auto;
     border-radius: 10px;
@@ -168,16 +178,15 @@ a {
     margin-bottom: 20px;
 }
 
-.about-text h3 {
+.about-content .about-text h3 {
     color: #FFD700;
     margin-top: 20px;
     font-size: 1.5em;
 }
 
-.about-text p {
+.about-content .about-text p {
     line-height: 1.6;
     margin-top: 10px;
-}
 }
 
 /** ---------- Achievements Section ---------- */
@@ -219,7 +228,6 @@ a {
     line-height: 1.6;
 }
 
-
 /** ---------- Contact Section ---------- */
 .contact-content {
     display: flex;
@@ -253,57 +261,84 @@ a {
     line-height: 1.6;
 }
 
-/* ---------- Mobile Responsive Styles ---------- */
+/** ---------- Mobile Responsive Styles ---------- */
 @media (max-width: 1080px) {
 
-  .home-content,
-  .mission-content,
-  .vision-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
+    .home-content,
+    .mission-content,
+    .vision-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 
-  .home-image img,
-  .mission-image img,
-  .vision-image img,
-  .about-content img,
-  .achievement-content img,
-  .contact-photo img {
-    max-width: 300px;
+    .home-image img,
+    .mission-image img,
+    .vision-image img,
+    .about-content img,
+    .achievement-content img,
+    .contact-photo img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .home-text,
+    .mission-text,
+    .vision-text,
+    .about-content p,
+    .achievement-content p,
+    .contact-name {
+        max-width: 90%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    nav {
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .home-text,
-  .mission-text,
-  .vision-text,
-  .about-content p,
-  .achievement-content p,
-  .contact-name {
-    max-width: 90%;
-    text-align: left;
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin-right: 0;
-  }
-
-  a {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
-  }
-
-.home-content.reverse {
-    flex-direction: row-reverse;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
 }
 
+nav ul {
+    list-style: none;
+    padding: 10px 0;  /* Move vertical spacing here */
+    margin: 0;  /* Remove margins */
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content; /* Adjusts the width to fit content */
+    margin: 0 auto;  /* Center the UL inside nav */
+    box-sizing: border-box; /* Prevents padding from pushing content out */
 }
 
+nav ul li {
+    margin: 0; /* Flexbox will handle spacing */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+}
