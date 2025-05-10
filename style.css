@@ -314,7 +314,10 @@ a {
     padding: 10px 20px;
     z-index: 2;
     position: relative;
-    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+    box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    }
 }
 
 nav ul {
@@ -322,7 +325,7 @@ nav ul {
     padding: 10px 0;  /* Move vertical spacing here */
     margin: 0;  /* Remove margins */
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     width: fit-content; /* Adjusts the width to fit content */
@@ -332,20 +335,18 @@ nav ul {
 
 nav ul li {
     margin: 0; /* Flexbox will handle spacing */
+    flex-shrink: 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-
-}
