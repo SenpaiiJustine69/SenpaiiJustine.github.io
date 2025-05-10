@@ -296,3 +296,52 @@ a {
     padding: 10px 0;
   }
 }
+
+/* ---------- Mobile Responsive Styles ---------- */
+@media (max-width: 1080px) {
+
+  .home-content,
+  .mission-content,
+  .vision-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .home-image img,
+  .mission-image img,
+  .vision-image img,
+  .about-content img,
+  .achievement-content img,
+  .contact-photo img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .home-text,
+  .mission-text,
+  .vision-text,
+  .about-content p,
+  .achievement-content p,
+  .contact-name {
+    max-width: 90%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  a {
+    padding: 10px 0;
+  }
+}
