@@ -254,50 +254,6 @@ a {
 }
 
 /* ---------- Mobile Responsive Styles ---------- */
-@media (max-width: 768px) {
-
-  .home-content,
-  .mission-content,
-  .vision-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-image img,
-  .mission-image img,
-  .vision-image img,
-  .about-content img,
-  .achievement-content img,
-  .contact-photo img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .home-text,
-  .mission-text,
-  .vision-text,
-  .about-content p,
-  .achievement-content p,
-  .contact-name {
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin-right: 0;
-  }
-
-  a {
-    padding: 10px 0;
-  }
-}
-
-/* ---------- Mobile Responsive Styles ---------- */
 @media (max-width: 1080px) {
 
   .home-content,
@@ -344,4 +300,10 @@ a {
   a {
     padding: 10px 0;
   }
+
+.home-content.reverse {
+    flex-direction: row-reverse;
 }
+
+}
+
