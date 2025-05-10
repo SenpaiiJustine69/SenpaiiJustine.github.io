@@ -1,0 +1,298 @@
+/** ---------- Base Styles ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url('MCT.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/** ---------- Header ---------- */
+header {
+    background-color: #FFD700;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/** ---------- Main Container ---------- */
+main {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+/** ---------- Footer ---------- */
+footer {
+    background-color: #FFD700;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    bottom: 0;
+}
+
+/** ---------- Navigation ---------- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+a {
+    background-color: #ffd90000;
+    color: rgb(151, 151, 151);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+/** ---------- Tab Content Visibility ---------- */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/** ---------- Home Section ---------- */
+.home-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.home-image img {
+    width: 500%;
+    max-width: 230px;
+    object-fit: inherit;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.home-text {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.home-text h2 {
+    margin-top: 0;
+}
+
+.home-text h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.home-text p {
+    line-height: 1.6;
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.home-content.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/** ---------- Page Indicator ---------- */
+.page-indicator {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #FFD700;
+    margin-bottom: 20px;
+}
+
+.page-indicator h2 {
+    color: #FFD700;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.page-indicator span {
+    font-weight: bold;
+}
+
+/** ---------- About Section ---------- */
+.about-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center; /* Centering the content */
+
+    .about-image img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    color: #FFD700;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+}
+
+/** ---------- Achievements Section ---------- */
+.achievements-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.achievement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.achievement-text {
+    max-width: 600px;
+}
+
+.achievement-text h3 {
+    margin-top: 0;
+}
+
+.achievement-text p {
+    line-height: 1.6;
+}
+
+
+/** ---------- Contact Section ---------- */
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.contact-details h3 {
+    margin-top: 10px;
+}
+
+.contact-details p {
+    line-height: 1.6;
+}
+
+/* ---------- Mobile Responsive Styles ---------- */
+@media (max-width: 768px) {
+
+  .home-content,
+  .mission-content,
+  .vision-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-image img,
+  .mission-image img,
+  .vision-image img,
+  .about-content img,
+  .achievement-content img,
+  .contact-photo img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .home-text,
+  .mission-text,
+  .vision-text,
+  .about-content p,
+  .achievement-content p,
+  .contact-name {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  a {
+    padding: 10px 0;
+  }
+}
